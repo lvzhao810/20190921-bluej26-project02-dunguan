@@ -1,0 +1,211 @@
+@charset "utf-8";
+@import "common"; 
+
+//头部下划线修改
+
+.active::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 127%;
+    margin: 0 auto;
+    margin-top: 7px;
+    background-color: #1abc9c;
+    position: relative;
+    left: -7px;
+ 
+}
+
+/*电影导演教你欣赏杜比全景声音效*/
+.list-news{
+    width: 1280px;
+//  height: 1400px;
+    background-color: #e7e9ec;
+    background-image: url(../img/MP3-底图.png);
+    background-position: (0 -180px);
+    background-repeat: no-repeat;
+    position: relative;    
+
+    .list-news-left{
+        width: 417px;
+        padding-top: 60px;
+    /*手风琴列表*/
+        .nav{
+            width: 223px;
+//          min-height: 590px;
+            background-color: #f3f2f2;
+            /*max-height: 750px;*/
+            color: #7c7979;
+            border-left: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+            border-right: 1px solid #cccccc;
+            margin-left: 150px;            
+            padding-top: 30px;
+            
+            .item01{
+                max-height: 154px;                          
+            }
+            .item02{
+                max-height:120px;
+            }
+            .item03{
+                max-height: 154px;
+            }
+            .item04{
+                max-height: 200px;
+            }
+            .item05{
+                max-height: 250px;
+            }
+            h3{
+                width: 222px;
+                height: 30px;
+                font-size: 15px;
+                line-height: 30px; 
+                padding-left: 25px; 
+                margin-bottom: 15px;  
+                &:active{
+                    background-color: #58636d;
+                    color: white;
+                }               
+//              border-top: 1px solid #dddddd;  
+//              background-image: linear-gradient(to top,#cecece 20%,#fdfdfd);
+                }
+            .activeNav{
+                background-color: #58636d;
+                color: white;
+            }
+            p{
+                width: 222px;
+                height: 34px;
+                font-size: 14px;
+                padding-left: 28px; 
+                
+            } 
+            .call{
+                p{
+                    font-size: 12px;
+//                  -webkit-transform:scale(0.8);
+//                  display:block;
+                }
+            }                    
+            .column{
+                width: 222px;
+                height: 0px;
+                overflow: hidden;
+                transition-property: height;
+                transition-duration: 0.8s;
+                li:last-of-type{
+                    margin-bottom: 22px;
+            }  
+            }
+            a{
+                color: #666666;
+            }
+            input{
+                display: none;
+            }
+            input:checked + label ~ .column{
+                height: 250px;
+            }          
+            input::after{
+                width: 15px;
+                height: 15px;
+                content: "-";
+                /*display: initial;*/
+            }
+            input:checked::after{
+                display: inline-block;
+            } 
+            input + label span{
+                transition: all 0.3s;
+                display: inline-block;
+            }
+            input:checked + label span {
+                transform: rotateZ(90deg);
+            }  
+            input:checked + label h3{
+                background-color: #58636d;
+                color: white;
+            }  
+        }
+    }
+    
+    .list-news-right{
+        width: 733px;
+        position: relative;
+        margin-top: 60px;
+        .list-news-right-head{
+            width: 733px;
+            font-size: 23px;
+            font-weight: bold;
+            color: white;
+            
+            p{
+//              margin-top: 28px;
+                line-height: 23px;    
+                margin-bottom: 4px;
+            }
+            hr{
+                width: 733px;
+                height: 2px;             
+                border: 0;
+                background-color: white;
+                margin-bottom: 31px;
+            }
+        }
+       .list-news-right-legs{
+           width: 733px;
+           text-align: center;
+           background-color: white;
+           margin-bottom: 103px;
+           .list-news-right-legs-head{
+                width: 706px;
+                font-size: 13px;
+                font-weight: bold;
+                padding-top: 24px;
+                margin: auto;
+            
+                p{
+                    line-height: 18px;    
+                    a{
+                        color: black;
+                    }
+                }
+                hr{
+                    width: 706px;
+                    height: 1px;             
+                    border: 0;
+                    background-color: #c4c4c5;
+                    margin-bottom: 31px;
+                    
+                }
+            }           
+           li{
+               h3{
+                   font-size: 16px;
+                   margin-top: 30px;  
+                   margin-bottom: 20px;                
+                   padding-left: 16px;
+               }
+               .QJ-title{
+                   font-size: 26px;
+                   color: #4b4b4b;
+               }
+               .legs-img{
+                   margin-top: 20px;
+                   margin-bottom: 15px;
+               }
+               p{
+                   font-size: 12px;
+                   line-height: 19px;
+                   text-align: justify;
+                   padding-left: 18px;
+                   padding-right: 18px;
+                   text-indent: 2em;
+               }                         
+           }
+       }                          
+    }
+}
+
